@@ -21,6 +21,7 @@ const viewsHandler = async (req, res) => {
   }
 
   res.set("content-type", "image/svg+xml");
+  res.set("cache-control", "max-age=0, no-cache, no-store, must-revalidate");
   res.send(badge);
 };
 
